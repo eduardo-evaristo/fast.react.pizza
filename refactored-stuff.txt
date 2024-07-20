@@ -1,0 +1,25 @@
+{/* Conditional rendering with short-circuiting */}
+      
+      {pizzasQTT > 0 && (
+      <ul className='pizzas'>
+       {/*Rendering lists with array.map*/} 
+        {pizzas.map((pizza) => (
+          <Pizza pizzaObj={pizza} key={pizza.name} />
+        ))}
+      </ul>
+    )}
+
+    {/* Conditional rendering with short-circuiting */}
+
+           {isOpen && (
+            <div className="order">
+                <p>Open until {closeHour}:00.</p>
+                <button className="btn">Order</button>
+            </div>
+            )}
+
+           {!isOpen && (
+            <div className="order">
+                <p>Closed until {openHour}:00.</p>
+            </div>
+           )}
